@@ -1,0 +1,4 @@
+venv
+skyland-as.json
+__pycache__/
+logs/

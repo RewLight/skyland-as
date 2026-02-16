@@ -1,0 +1,51 @@
+# run main.py
+name: Auto Sign
+on:
+  schedule:
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run main.py
+        env:
+          GitHub_Actions: true
+          # 对于多个账号一定会有人机验证问题，且因为是密码，有一定的安全风险
+          # PHONE: ${{ secrets.PHONE }}
+          # PASSWORD: ${{ secrets.PASSWORD }}
+          
+          # 账号配置
+          TOKEN: ${{ secrets.TOKEN }}
+          
+          # 推送服务配置
+          PUSH_SERVICES: ${{ secrets.PUSH_SERVICES }}
+          
+          # Server酱³ 配置
+          SC3_SENDKEY: ${{ secrets.SC3_SENDKEY }}
+          SC3_UID: ${{ secrets.SC3_UID }}
+          
+          # PushPlus 配置
+          PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
+          TITLE: ${{ secrets.TITLE }}
+          TOPIC: ${{ secrets.TOPIC }}
+          
+          # QMSG 配置
+          QMSG_TOKEN: ${{ secrets.QMSG_TOKEN }}
+          QQ: ${{ secrets.QQ }}
+          BOT: ${{ secrets.BOT }}
+          QMSG_TYPE: ${{ secrets.QMSG_TYPE }}
+          
+          # 其他配置
+          EXIT_WHEN_FAIL: ${{ vars.EXIT_WHEN_FAIL }}
+        run:
+          python src/main.py
