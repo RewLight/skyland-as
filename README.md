@@ -1,6 +1,6 @@
 # skyland-as
 
-Originial Repo: https://gitee.com/FancyCabbage/skyland-auto-sign
+Original Repo: https://gitee.com/FancyCabbage/skyland-auto-sign
 
 森空岛自动签到脚本，支持明日方舟和终末地的自动签到。
 
