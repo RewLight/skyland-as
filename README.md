@@ -4,7 +4,7 @@ Original Repo: https://gitee.com/FancyCabbage/skyland-auto-sign
 
 森空岛自动签到脚本，支持明日方舟和终末地的自动签到。
 
-> [!INFO]
+> [!IMPORTANT]  
 > **获取 TOKEN 教程**：请前往 [https://gitee.com/FancyCabbage/skyland-auto-sign](https://gitee.com/FancyCabbage/skyland-auto-sign) 查看详细步骤，获取森空岛账号的 TOKEN 后根据配置方式填写。
 
 
