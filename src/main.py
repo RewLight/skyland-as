@@ -6,6 +6,9 @@ from datetime import date
 
 import requests
 
+from rich.logging import RichHandler
+import rich.traceback
+
 import push
 from skyland import start
 
@@ -25,12 +28,12 @@ def config_logger():
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     file_handler.setFormatter(formatter)
 
-    console_handler = logging.StreamHandler()
-    # console_formatter = logging.Formatter('%(message)s')
-    # console_handler.setFormatter(console_formatter)
+    console_handler = RichHandler(rich_tracebacks=True)
     console_handler.setLevel(logging.INFO)
-    console_handler.setFormatter(formatter)
     logger.addHandler(console_handler)
+
+    # enable nicer tracebacks
+    rich.traceback.install()
 
     def filter_code(text):
         filter_key = ['code', 'cred', 'token']
