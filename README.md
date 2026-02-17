@@ -5,7 +5,9 @@ Original Repo: https://gitee.com/FancyCabbage/skyland-auto-sign
 森空岛自动签到脚本，支持明日方舟和终末地的自动签到。
 
 > [!IMPORTANT]  
-> **获取 TOKEN 教程**：请前往 [https://gitee.com/FancyCabbage/skyland-auto-sign](https://gitee.com/FancyCabbage/skyland-auto-sign) 查看详细步骤，获取森空岛账号的 TOKEN 后根据配置方式填写。
+> **获取 TOKEN 教程**：  
+>   1. 登录[森空岛](https://www.skland.com/)；  
+>   2. 在[这里](https://web-api.skland.com/account/info/hg)获取 token （data.content 即为 token）  
 
 
 ## 配置方式
@@ -112,7 +114,9 @@ $ python src/main.py
 
 怕别用，用别怕。
 
-[WTFPL](LICENSE) (Who do really care about this?)
+其实森空岛的英文应该是 Skland；但是原仓库就是 Skyland。将错就错吧。¯⁠\⁠_⁠(⁠ツ⁠)⁠_⁠/⁠¯
+
+许可证：[WTFPL](LICENSE) (Who do really care about this?)
 
 <details>
   <summary>MIT License from original repo</summary>
